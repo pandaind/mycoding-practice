@@ -17,13 +17,17 @@ class Solution {
         }
         
         
-        ListNode curr = head;
-        while(curr != null && curr.next != null) {
-            if(curr.next.val == val){
-                curr.next = curr.next.next;
+        ListNode curr = head, prev = new ListNode();
+     
+        while(curr != null) {
+            
+            if(curr.val == val){
+                prev.next = curr.next;
             } else {
-                curr = curr.next;    
+                prev = curr;    
             }
+            curr = curr.next;
+            
         }
         
         

@@ -1,2 +1,3 @@
 # myleetcode
-Target = 1000 Problems
+LeetCode Target = 1000 Problems
+GFG Target = 1000 Problems

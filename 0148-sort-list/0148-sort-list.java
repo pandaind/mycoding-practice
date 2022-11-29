@@ -10,18 +10,20 @@
  */
 class Solution {
     public ListNode sortList(ListNode head) {
-        PriorityQueue<Integer> list = new PriorityQueue<>((a,b)-> Integer.compare(a,b));
+        List<Integer> list = new ArrayList<>();
         ListNode curr = head;
         while(curr!=null){
             list.add(curr.val);
             curr = curr.next;
         }
         
+        Collections.sort(list);
+        
         ListNode dummyNode = new ListNode(0);
         ListNode node = dummyNode;
         
-        while(!list.isEmpty()){
-            node.next = new ListNode(list.poll());
+        for(Integer val: list){
+            node.next = new ListNode(val);
             node = node.next;
         }
         

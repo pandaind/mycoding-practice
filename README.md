@@ -6,4 +6,4 @@
 
  GFG Target = 1000 Problems
  
- GFG Current = 29 Problems
+ GFG Current = 31 Problems
